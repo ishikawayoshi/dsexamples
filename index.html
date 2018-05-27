@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.5/css/bootstrap-select.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.5/js/bootstrap-select.min.js"></script>
+    <style>
+        .link-container {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+    <div class="container">
+        <h1>Example 1</h1>
+        <div class="col-md-12">
+            <table class="table table-hover">
+                <tbody>
+                    <tr>
+                        <th>Date</th>
+                        <td>
+                            <input id="date" name="date" class="form-control" itemlabel="date" readonly="readonly" type="text" value="05/24/2018">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Title</th>
+                        <td>
+                            <input id="title" name="title" class="form-control" itemlabel="title" type="text" value="test">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Text</th>
+                        <td>
+                            <div id="div_sentences">
+                                <div>
+                                    <span class="link-sentence-number">1</span>
+                                    <section data-id="153315" style="display: inline-block">test&nbsp;data</section>
+                                </div>
+                                <div>
+                                    <span class="link-sentence-number">2</span>
+                                    <section data-id="153316" style="display: inline-block">test&nbsp;data</section>
+                                </div>
+                                <div>
+                                    <span class="link-sentence-number">3</span>
+                                    <section data-id="153317" style="display: inline-block">test&nbsp;data</section>
+                                </div>
+                                <div>
+                                    <span class="link-sentence-number">4</span>
+                                    <section data-id="153318" style="display: inline-block">test&nbsp;data</section>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-12">
+            <span class="btn btn-primary custom-width btn-space" id="btn-back-tolist">Finish</span>
+            <span class="btn btn-success custom-width btn-space" id="autolink">Autolink</span>
+            <span class="btn btn-warning custom-width" id="skip-others">Skip Others</span>
+        </div>
+    </div>
+
+
+
+
+    <div class="container link-container">
+        <div class="link-form well">
+            <h3 id='link-title'>Line number 1</h3>
+            <div class="wwdw">
+
+                <div class="col-md-12">
+                    <h4>WWDW</h4>
+                    <div class="form-group col-md-2 col-lg-2 col-sm-2">
+                        <label>Who</label>
+                        <select id="DDLActivites" data-style="btn-default" class="selectpicker form-control" multiple data-max-options="2">
+                            <option>Mustard</option>
+                            <option>Barbecue</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-2 col-lg-2 col-sm-2">
+                        <label>What</label>
+                        <select id="DDLActivites" data-style="btn-default" class="selectpicker form-control" multiple data-max-options="2">
+                            <option>Mustard</option>
+                            <option>Barbecue</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-2 col-lg-2 col-sm-2">
+                        <label>Direction</label>
+                        <select id="DDLActivites" data-style="btn-default" class="selectpicker form-control" multiple data-max-options="1">
+                            <option>&lt;</option>
+                            <option>&gt;</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-2 col-lg-2 col-sm-2">
+                        <label>Whom</label>
+                        <select id="DDLActivites" data-style="btn-default" class="selectpicker form-control" multiple data-max-options="2">
+                            <option>Mustard</option>
+                            <option>Barbecue</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="wa">
+                <div class="col-md-12">
+                    <h4>WA</h4>
+                    <div class="form-group col-md-2 col-lg-2 col-sm-2">
+                        <label>Who</label>
+                        <select id="DDLActivites" data-style="btn-default" class="selectpicker form-control" multiple data-max-options="2">
+                            <option>Mustard</option>
+                            <option>Barbecue</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-2 col-lg-2 col-sm-2">
+                        <label>Activity</label>
+                        <select id="DDLActivites" data-style="btn-default" class="selectpicker form-control" multiple data-max-options="2">
+                            <option>Mustard</option>
+                            <option>Barbecue</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="we">
+                <div class="col-md-12">
+                    <h4>WE</h4>
+                    <div class="form-group col-md-2 col-lg-2 col-sm-2">
+                        <label>Who</label>
+                        <select id="DDLActivites" data-style="btn-default" class="selectpicker form-control" multiple data-max-options="2">
+                            <option>Mustard</option>
+                            <option>Barbecue</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-2 col-lg-2 col-sm-2">
+                        <label>Emotion</label>
+                        <select id="DDLActivites" data-style="btn-default" class="selectpicker form-control" multiple data-max-options="2">
+                            <option>Mustard</option>
+                            <option>Barbecue</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <btn class='btn btn-xs btn-primary' onClick='toggleStep1()'>wwdw</btn>
+                <btn class='btn btn-xs btn-primary' onClick='toggleStep2()'>we</btn>
+                <btn class='btn btn-xs btn-primary' onClick='toggleStep3()'>wa</btn>
+                <btn class='btn btn-xs btn-success'>Save</btn>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        function toggleStep1() {
+            jQuery('.wwdw').show();
+            jQuery('.we').hide();
+            jQuery('.wa').hide();
+        }
+
+        function toggleStep2() {
+            jQuery('.wwdw').hide();
+            jQuery('.we').show();
+            jQuery('.wa').hide();
+        }
+
+        function toggleStep3() {
+            jQuery('.wwdw').hide();
+            jQuery('.we').hide();
+            jQuery('.wa').show();
+        }
+
+        jQuery(document).ready(function () {
+            jQuery('.we').hide();
+            jQuery('.wa').hide();
+            jQuery('.link-form').hide();
+
+            jQuery('.link-sentence-number').click(function () {
+                jQuery('.link-form').show();
+                var title = jQuery(this).text();
+                jQuery('#link-title').text('line number ' + title);
+                console.log(this);
+            });
+        })
+    </script>
+
+</body>
+
+</html>
