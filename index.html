@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.5/css/bootstrap-select.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.5/js/bootstrap-select.min.js"></script>
+    <!-- <script src="https://docs.handsontable.com/3.0.0/bower_components/handsontable/dist/handsontable.full.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handsontable/0.19.0/handsontable.full.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://docs.handsontable.com/3.0.0/bower_components/handsontable/dist/handsontable.full.min.css">
+    <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.jquery.js"></script>
+    <script src="handsonchooseneditor.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+    <div class="container">
+        <h1>Example 3</h1>
+        <div class="col-md-12">
+            <table class="table table-hover">
+                <tbody>
+                    <tr>
+                        <th>Date</th>
+                        <td>
+                            <input id="date" name="date" class="form-control" itemlabel="date" readonly="readonly" type="text" value="05/24/2018">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Title</th>
+                        <td>
+                            <input id="title" name="title" class="form-control" itemlabel="title" type="text" value="test">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Text</th>
+                        <td>
+                            <div id="example1">
+
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-md-12">
+            <span class="btn btn-primary custom-width btn-space" id="btn-back-tolist">Finish</span>
+            <span class="btn btn-success custom-width btn-space" id="autolink">Autolink</span>
+            <span class="btn btn-warning custom-width" id="skip-others">Skip Others</span>
+        </div>
+    </div>
+
+    <script>
+        var
+            container = document.getElementById('example1'),
+            hot;
+
+
+        function getData() {
+            return [
+                [1, "Test test test", 'SPOT','SPOT,AFLOAT','AFLOAT','SPOT','AFLOAT','AFLOAT','AFLOAT','AFLOAT'],
+                [2, "Test test test", 'SPOT','SPOT,AFLOAT','AFLOAT','SPOT','AFLOAT','AFLOAT','AFLOAT','AFLOAT'],
+                [3, "Test test test", 'SPOT','SPOT,AFLOAT','AFLOAT','SPOT','AFLOAT','AFLOAT','AFLOAT','AFLOAT'],
+                [4, "Test test test", 'SPOT','SPOT,AFLOAT','AFLOAT','SPOT','AFLOAT','AFLOAT','AFLOAT','AFLOAT']
+            ];
+        }
+
+        var data = [];
+
+        var columnDropMult = {
+            renderer: customDropdownRenderer,
+            editor: "chosen",
+            width: 120,
+            chosenOptions: {
+                multiple: true,
+                data: [
+                    {
+                        id: "SPOT",
+                        label: "Spot"
+                    }, {
+                        id: "AFLOAT",
+                        label: "Afloat"
+                    }, {
+                        id: "PREORDER",
+                        label: "Preorder"
+                    }, {
+                        id: "FORWARD",
+                        label: "Forward"
+                    }
+                ]
+            }
+        };
+
+        var columnDropSingle = {
+            renderer: customDropdownRenderer,
+            editor: "chosen",
+            width: 90,
+            chosenOptions: {
+                data: [
+                    {
+                        id: "SPOT",
+                        label: "Spot"
+                    }, {
+                        id: "AFLOAT",
+                        label: "Afloat"
+                    }, {
+                        id: "PREORDER",
+                        label: "Preorder"
+                    }, {
+                        id: "FORWARD",
+                        label: "Forward"
+                    }
+                ]
+            }
+        };
+
+        hot = new Handsontable(container, {
+            data: getData(),
+            // minSpareRows: 1,
+            // minRows: 5,
+            colHeaders: ['id', 'Sentence', 'Who', 'What', 'Direction', 'Whom', 'Who', 'Emotion', 'Who', 'Activity'],
+            // rowHeaders: true,
+            columns: [
+                { type: 'numeric' },
+                { type: 'numeric' },
+                columnDropMult,
+                columnDropMult,
+                columnDropSingle,
+                columnDropMult,
+                columnDropMult,
+                columnDropMult,
+                columnDropMult,
+                columnDropMult
+            ]
+        });
+
+        // hot = new Handsontable(container, {
+        //     data: getData(),
+        //     colHeaders: ['id', 'Sentence', 'Who', 'What', 'Direction', 'Whom', 'Who', 'Emotion', 'Who', 'Activity'],
+        //     columns: [
+        //         { type: 'numeric' },
+        //         {},
+        //         {
+        //             type: 'dropdown',
+        //             source: ['yellow', 'red', 'orange', 'green', 'blue', 'gray', 'black', 'white']
+        //         },
+        //         {
+        //             renderer: customDropdownRenderer,
+        //             editor: "chosen",
+        //             width: 150,
+        //             chosenOptions: {
+        //                 multiple: true,
+        //                 data: [
+        //                     {
+        //                         id: "1",
+        //                         label: "Catuai"
+        //                     }, {
+        //                         id: "2",
+        //                         label: "Bourbone"
+        //                     }, {
+        //                         id: "3",
+        //                         label: "Geisha"
+        //                     }
+        //                 ]
+        //             }
+        //         },
+        //         {
+        //             type: 'dropdown',
+        //             source: ['yellow', 'red', 'orange', 'green', 'blue', 'gray', 'black', 'white']
+        //         },
+        //         {
+        //             type: 'dropdown',
+        //             source: ['yellow', 'red', 'orange', 'green', 'blue', 'gray', 'black', 'white']
+        //         },
+        //         {
+        //             type: 'dropdown',
+        //             source: ['yellow', 'red', 'orange', 'green', 'blue', 'gray', 'black', 'white']
+        //         },
+        //         {
+        //             type: 'dropdown',
+        //             source: ['yellow', 'red', 'orange', 'green', 'blue', 'gray', 'black', 'white']
+        //         },
+        //         {
+        //             type: 'dropdown',
+        //             source: ['yellow', 'red', 'orange', 'green', 'blue', 'gray', 'black', 'white']
+        //         }
+        //     ]
+        // });
+
+        function customDropdownRenderer(instance, td, row, col, prop, value, cellProperties) {
+            var selectedId;
+            var optionsList = cellProperties.chosenOptions.data;
+
+            var values = (value + "").split(",");
+            var value = [];
+            for (var index = 0; index < optionsList.length; index++) {
+                if (values.indexOf(optionsList[index].id + "") > -1) {
+                    selectedId = optionsList[index].id;
+                    value.push(optionsList[index].label);
+                }
+            }
+            value = value.join(", ");
+
+            Handsontable.TextCell.renderer.apply(this, arguments);
+        }
+    </script>
+
+</body>
+
+</html>
