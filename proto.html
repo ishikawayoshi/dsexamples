@@ -14,6 +14,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="bootstrap-select.js"></script>
+    <script src="bootstable.js"></script>
 
 </head>
 
@@ -21,48 +22,77 @@
     <div class="navbar" style="height: 80px;"></div>
     <div class="container">
         <div class="row">
-            <div class="col-md-6 app-text">
+            <div class="col-md-12 app-text">
                 <div class="fields">
-                    <div>
-                        <div class="senteces-lines" id="sentence1">1 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora maxime deleniti provident
-                            molestias eos aliquid accusamus quo non architecto, molestiae nece!</div>
-                        <div class="senteces-lines" id="sentence2">2 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora maxime deleniti provident
-                            molestias eos aliquid accusamus quo non architecto, molestiae nece!</div>
-                        <div class="senteces-lines" id="sentence3">3 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora maxime deleniti provident
-                            molestias eos aliquid accusamus quo non architecto, molestiae nece!</div>
-                        <div class="senteces-lines" id="sentence4">4 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora maxime deleniti provident
-                            molestias eos aliquid accusamus quo non architecto, molestiae nece!</div>
-                        <div class="senteces-lines" id="sentence5">5 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora maxime deleniti provident
-                            molestias eos aliquid accusamus quo non architecto, molestiae nece!</div>
-                        <div class="senteces-lines" id="sentence6">6 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora maxime deleniti provident
-                            molestias eos aliquid accusamus quo non architecto, molestiae nece!</div>
-                        <div class="senteces-lines" id="sentence7">7 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora maxime deleniti provident
-                            molestias eos aliquid accusamus quo non architecto, molestiae nece!</div>
-                        <div class="senteces-lines" id="sentence8">8 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora maxime deleniti provident
-                            molestias eos aliquid accusamus quo non architecto, molestiae nece!</div>
-                        <div class="senteces-lines" id="sentence9">9 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora maxime deleniti provident
-                            molestias eos aliquid accusamus quo non architecto, molestiae nece!</div>
-                        <div class="senteces-lines" id="sentence10">10 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora maxime deleniti provident
-                            molestias eos aliquid accusamus quo non architecto, molestiae nece!</div>
-                        <div class="senteces-lines" id="sentence11">11 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora maxime deleniti provident
-                            molestias eos aliquid accusamus quo non architecto, molestiae nece!</div>
-                        <div class="senteces-lines" id="sentence12">12 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora maxime deleniti provident
-                            molestias eos aliquid accusamus quo non architecto, molestiae nece!</div>
-                        <div class="senteces-lines" id="sentence13">13 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora maxime deleniti provident
-                            molestias eos aliquid accusamus quo non architecto, molestiae nece!</div>
-                        <div class="senteces-lines" id="sentence14">14 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora maxime deleniti provident
-                            molestias eos aliquid accusamus quo non architecto, molestiae nece!</div>
-                        <div class="senteces-lines" id="sentence15">15 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora maxime deleniti provident
-                            molestias eos aliquid accusamus quo non architecto, molestiae nece!</div>
-                        <div class="senteces-lines" id="sentence16">16 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora maxime deleniti provident
-                            molestias eos aliquid accusamus quo non architecto, molestiae nece!</div>
-                        <div class="senteces-lines" id="sentence17">17 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora maxime deleniti provident
-                            molestias eos aliquid accusamus quo non architecto, molestiae nece!</div>
-                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Sentence</th>
+                                <th>Who</th>
+                                <th>What</th>
+                                <th>Direction</th>
+                                <th>Whom</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="senteces-lines" id="sentence1">1 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora </div>
+                                </td>
+                                <td>FFF</td>
+                                <td>FFF</td>
+                                <td>Left</td>
+                                <td>AAA</td>
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="senteces-lines" id="sentence2">2 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora </div>
+                                </td>
+                                <td>FFF</td>
+                                <td>FFF</td>
+                                <td>Left</td>
+                                <td>AAA</td>
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="senteces-lines" id="sentence3">3 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora </div>
+                                </td>
+                                <td id='who_cell'>
+                                    FAF
+                                </td>
+                                <td>FFF</td>
+                                <td>Left</td>
+                                <td>AAA</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- <div class="senteces-lines" id="sentence1">1 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora </div> -->
+                    <!-- <div class="senteces-lines" id="sentence2">2 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora </div>
+                        <div class="senteces-lines" id="sentence3">3 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora </div>
+                        <div class="senteces-lines" id="sentence4">4 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora </div>
+                        <div class="senteces-lines" id="sentence5">5 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora </div>
+                        <div class="senteces-lines" id="sentence6">6 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora </div>
+                        <div class="senteces-lines" id="sentence7">7 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora </div>
+                        <div class="senteces-lines" id="sentence8">8 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora </div>
+                        <div class="senteces-lines" id="sentence9">9 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora </div>
+                        <div class="senteces-lines" id="sentence10">10 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora </div>
+                        <div class="senteces-lines" id="sentence11">11 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora </div>
+                        <div class="senteces-lines" id="sentence12">12 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora </div>
+                        <div class="senteces-lines" id="sentence13">13 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora </div>
+                        <div class="senteces-lines" id="sentence14">14 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora </div>
+                        <div class="senteces-lines" id="sentence15">15 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora </div>
+                        <div class="senteces-lines" id="sentence16">16 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora </div>
+                        <div class="senteces-lines" id="sentence17">17 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora </div> -->
+
                 </div>
             </div>
             <div class="col-md-6 app-model">
-                <form>
+                <hr>
+                <!-- <form>
                     <div class="sentence-model">
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora maxime deleniti provident molestias
                             eos aliquid accusamus quo non architecto, molestiae necessitatibus quibusdam laudantium ducimus!
@@ -108,12 +138,12 @@
                         </select>
 
                     </div>
-                </form>
-                <br>
-                <div class="btn-group" role='group'>
-                    <button type="button" class="btn btn-primary" style="margin-left: 15px; margin-top: 20px">Save</button>
+                </form> -->
+                <!-- <br>
+                    <div class="btn-group" role='group'>
+                        <button type="button" class="btn btn-primary" style="margin-left: 15px; margin-top: 20px">Save</button>
 
-                </div>
+                    </div> -->
             </div>
         </div>
     </div>
@@ -147,24 +177,33 @@
         </div>
     </div>
     <script>
-        $(document).ready(function () {
-            function handlerIn(){
-                var getHtml = jQuery(this).html();
-                // console.log(getHtml);
-                // jQuery('.sentence-model').detach();
-                jQuery(this).addClass("bg-primary text-white");
-                jQuery('.sentence-model').text(getHtml);
-            }
-
-            function handlerOut(){
-                if(jQuery(this).hasClass('senteces-lines')){
-                    
-                };
-                jQuery(this).removeClass("bg-primary text-white");
-            }
-
-           jQuery('.senteces-lines').hover(handlerIn,handlerOut);
+        $('table').SetEditable({
+            columnsEd: "1,2,3,4",
+            onEdit: function () {
+                console.log(this);
+            },
+            onDelete: function () {},
+            onBeforeDelete: function () {},
+            onAdd: function () {}
         });
+        // $(document).ready(function () {
+        //     function handlerIn(){
+        //         var getHtml = jQuery(this).html();
+        //         // console.log(getHtml);
+        //         // jQuery('.sentence-model').detach();
+        //         jQuery(this).addClass("bg-primary text-white");
+        //         jQuery('.sentence-model').text(getHtml);
+        //     }
+
+        //     function handlerOut(){
+        //         if(jQuery(this).hasClass('senteces-lines')){
+
+        //         };
+        //         jQuery(this).removeClass("bg-primary text-white");
+        //     }
+
+        //    jQuery('.senteces-lines').hover(handlerIn,handlerOut);
+        // });
     </script>
 </body>
 
