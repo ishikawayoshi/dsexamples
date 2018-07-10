@@ -22,16 +22,16 @@
     <div class="navbar" style="height: 80px;"></div>
     <div class="container">
         <div class="row">
-            <div class="col-md-12 app-text">
+            <div class="col-md-12 app-text text-left">
                 <div class="fields">
                     <table class="table">
                         <thead>
                             <tr>
                                 <th>Sentence</th>
-                                <th>Who</th>
-                                <th>What</th>
-                                <th>Direction</th>
-                                <th>Whom</th>
+                                <th style="width: 140px">Who</th>
+                                <th style="width: 140px">What</th>
+                                <th style="width: 140px">Direction</th>
+                                <th style="width: 140px">Whom</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -59,9 +59,7 @@
                                 <td>
                                     <div class="senteces-lines" id="sentence3">3 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempora </div>
                                 </td>
-                                <td id='who_cell'>
-                                    FAF
-                                </td>
+                                <td id='who_cell'>FAF</td>
                                 <td>FFF</td>
                                 <td>Left</td>
                                 <td>AAA</td>
@@ -177,33 +175,37 @@
         </div>
     </div>
     <script>
-        $('table').SetEditable({
-            columnsEd: "1,2,3,4",
-            onEdit: function () {
-                console.log(this);
-            },
-            onDelete: function () {},
-            onBeforeDelete: function () {},
-            onAdd: function () {}
-        });
-        // $(document).ready(function () {
-        //     function handlerIn(){
-        //         var getHtml = jQuery(this).html();
-        //         // console.log(getHtml);
-        //         // jQuery('.sentence-model').detach();
-        //         jQuery(this).addClass("bg-primary text-white");
-        //         jQuery('.sentence-model').text(getHtml);
-        //     }
+        $(document).ready(function () {
+                    $('table').SetEditable({
+                        columnsEd: "1,2,3,4",
+                        onEdit: function () {
+                            console.log(this);
+                        },
+                        onDelete: function () {},
+                        onBeforeDelete: function () {},
+                        onAdd: function () {}
+                    });
+                    jQuery('tr th:first-child').addClass('text-left');
+                });
 
-        //     function handlerOut(){
-        //         if(jQuery(this).hasClass('senteces-lines')){
+                // $(document).ready(function () {
+                //     function handlerIn(){
+                //         var getHtml = jQuery(this).html();
+                //         // console.log(getHtml);
+                //         // jQuery('.sentence-model').detach();
+                //         jQuery(this).addClass("bg-primary text-white");
+                //         jQuery('.sentence-model').text(getHtml);
+                //     }
 
-        //         };
-        //         jQuery(this).removeClass("bg-primary text-white");
-        //     }
+                //     function handlerOut(){
+                //         if(jQuery(this).hasClass('senteces-lines')){
 
-        //    jQuery('.senteces-lines').hover(handlerIn,handlerOut);
-        // });
+                //         };
+                //         jQuery(this).removeClass("bg-primary text-white");
+                //     }
+
+                //    jQuery('.senteces-lines').hover(handlerIn,handlerOut);
+                // });
     </script>
 </body>
 
