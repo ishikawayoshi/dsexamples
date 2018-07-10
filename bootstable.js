@@ -18,9 +18,9 @@ var newColHtml = '<div class="btn-group pull-right">' +
     '<button id="bAcep" type="button" class="btn btn-sm btn-default" style="display:none;" onclick="rowAcep(this);">' +
     '<span class="glyphicon glyphicon-ok" > </span>' +
     '</button>' +
-    '<button id="bCanc" type="button" class="btn btn-sm btn-default" style="display:none;" onclick="rowCancel(this);">' +
-    '<span class="glyphicon glyphicon-remove" > </span>' +
-    '</button>' +
+    // '<button id="bCanc" type="button" class="btn btn-sm btn-default" style="display:none;" onclick="rowCancel(this);">' +
+    // '<span class="glyphicon glyphicon-remove" > </span>' +
+    // '</button>' +
     '</div>';
 var colEdicHtml = '<td name="buttons">' + newColHtml + '</td>';
 
@@ -138,7 +138,7 @@ function rowEdit(but) { //Inicia la edición de una fila
         var cont = $td.html(); //lee contenido
         console.log(cont);
         var div = '<div style="display: none;">' + cont + '</div>'; //guarda contenido
-        var input = '<input class="form-control input-sm"  value="' + cont + '">';
+        var input = '<input class="form-control input-sm" style="width:90px;margin: 2px"  value="' + cont + '">';
         //var input = `<select name='select-one' class="selectpicker" multiple> <option>Mustard</option><option>Ketchup</option><option>Relish</option></select>`;
         $td.html(div + input); //fija contenido
     });
